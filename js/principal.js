@@ -92,8 +92,8 @@ function comecarJogar() {
 Escolhe uma palavra Aleatória numa lista de Array
 */
 function palavraSecreta() {
-    /*var lista = ["Abacate","Abacaxi","Abiu","Abrico","Abrunho","Açai","Acerola","Ameixa","Amendoa","Amora","Arando","Avela","Banana","Cacau","Caja","Caju","Caqui","Castanha","Cereja","Coco","Cupuaçu","Damasco","Dende","Figo","Goiaba","Graviola","Groselha","Guarana","Jaca","Jamelao","Jatoba","Laranja","Lichia","Lima","Limao","Maça","Mamao","Manga","Maracuja","Melancia","Melao","Mexerica","Morango","Pera","Pessego","Pistache","Pitaia","Pitanga","Tamara","Uva"];*/
-    var lista = ["pist", "pist"]
+    var lista = ["Abacate","Abacaxi","Abiu","Abrico","Abrunho","Açai","Acerola","Ameixa","Amendoa","Amora","Arando","Avela","Banana","Cacau","Caja","Caju","Caqui","Castanha","Cereja","Coco","Cupuaçu","Damasco","Dende","Figo","Goiaba","Graviola","Groselha","Guarana","Jaca","Jamelao","Jatoba","Laranja","Lichia","Lima","Limao","Maça","Mamao","Manga","Maracuja","Melancia","Melao","Mexerica","Morango","Pera","Pessego","Pistache","Pitaia","Pitanga","Tamara","Uva"];
+    /*var lista = ["pist", "pist"]*/
 
 
 
@@ -266,14 +266,16 @@ function qualTecla() {
             console.log("travando2 "+ letraCorreta) 
 
             /*letraAcertada = ["A" , "A" ,"A" ,"A" ,"A" ,"A" ,"A" ,"A" ]*/
-            if (letraAcertada.length <= 6) {
-                var letraAcertadaHtml = document.querySelector(".letraAcertada");
-                letraAcertadaHtml.innerHTML = letraAcertada.toString().toUpperCase().replace(/W,/g,'&nbsp<font color="white">W</font>&nbsp').replace(/W/g,'<font color="white">W</font>&nbsp').replace(/,/g,'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
-            } else {
-                var letraAcertadaHtml = document.querySelector(".letraAcertada");
-                letraAcertadaHtml.innerHTML = letraAcertada.toString().toUpperCase().replace(/W,/g,'<font color="white">W</font>&nbsp&nbsp').replace(/W/g,'&nbsp<font color="white">W</font>').replace(/,/g,'&nbsp&nbsp&nbsp;&nbsp;&nbsp;')
-            }
 
+            if ( perdeu == false) {
+                if ( letraAcertada.length <= 6 ) {
+                    var letraAcertadaHtml = document.querySelector(".letraAcertada");
+                    letraAcertadaHtml.innerHTML = letraAcertada.toString().toUpperCase().replace(/W,/g,'&nbsp<font color="white">W</font>&nbsp').replace(/W/g,'<font color="white">W</font>&nbsp').replace(/,/g,'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
+                } else {
+                    var letraAcertadaHtml = document.querySelector(".letraAcertada");
+                    letraAcertadaHtml.innerHTML = letraAcertada.toString().toUpperCase().replace(/W,/g,'<font color="white">W</font>&nbsp&nbsp').replace(/W/g,'&nbsp<font color="white">W</font>').replace(/,/g,'&nbsp&nbsp&nbsp;&nbsp;&nbsp;')
+                }
+            }
 
 
         
@@ -370,6 +372,7 @@ function qualTecla() {
     /*
     Total de vidas restantes
     */
+   
     vidas = vidas - teclaRepetida.length
 
 
@@ -387,6 +390,7 @@ function qualTecla() {
     /*
     Eliminando as vidas
     */
+    
     if (venceu == false && perdeu == false) {
         if (vidas == -1) {
             document.getElementById("idposte").style.display = "initial";
@@ -466,7 +470,7 @@ function qualTecla() {
     console.log("TECLAREPETIDA AQUI!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! VIDA " + stringAcertada)
     console.log("TECLAREPETIDA AQUI!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! VIDA " + palavraSegredo)
 
-    if (stringAcertada == palavraSegredo){
+    if (stringAcertada == palavraSegredo && perdeu == false) {
         document.getElementById("idmensagem").style.display = "initial";
         document.getElementById("idmensagem").style.color = "green";
         /*
