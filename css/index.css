@@ -387,6 +387,7 @@ criando a base do boneco da forca
 }
 
 .letraAcertadamobile{
+    display: none;
     background-color: transparent;
     width: 100%;
     height: 100%;
