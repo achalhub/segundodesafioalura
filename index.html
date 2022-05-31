@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<meta charset="UTF-8">
+		<title>Segundo Desafio</title>
+		<link rel="icon" href="Vector.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+	
+
+		<!-- 
+		Deixar responsivo:
+		<link rel="stylesheet" media="screen and (max-width: 1000px)" type="text/css" href="css/mobile.css"> 
+		-->
+		
+	</head>
+
+	<body>
+
+		<header>
+			<div class="imgAlura">
+				<img src="img/Vector.png">
+			</div>	
+		</header>
+
+
+		<main>
+
+
+
+
+			<section >
+
+				<div id="idbotaoComecarNovaPalavra" class="botaoComecarNovaPalavra">
+					
+					<button type="button" class="botaoComecarJogar">Começar a Jogar</button>
+					
+
+
+					<button type="button" class="botaoAdicionarPalavra">Adicionar Nova Palavra</button>
+					
+				</div>
+
+			</section>
+
+
+
+
+
+			<section >
+
+				<div id="idsecaoDeAdicionarPalavra" class="secaoDeAdicionarPalavra">
+					<div class="divTextArea">
+						<textarea cols="5" rows="5" class="textArea" placeholder="Digite sua palavra"></textarea>
+					</div>
+
+					<div class="botaoSalvarCancelar">
+						<p class="informacao"><img src="img/exclamacao.png">  Máximo de 8 Letras.</P>
+						<button type="button" class="botaoSalvarComecar">Salvar e Começar</button>
+						<button type="button" class="botaoCancelar">Cancelar</button>
+					</div>
+				</div>
+
+			</section>
+
+
+
+
+			<section >
+				<div id="idbotaoNovoJogoDesistir">
+
+					<div class="tabuleiro">
+						<div class="bonecoForca">
+							<p class="teclasApertadas">Bem vindo ao jogo! Aperte qualquer tecla para começar: </P>
+							<p class="baseForca"><img src="img/erro1.png"></P>
+							<p id="idposte" class="poste"><img src="img/erro2.png"></P>
+							<p id="idpostebarra" class="postebarra"><img src="img/erro3.png"></P>
+							<p id="idcorda" class="corda"><img src="img/erro4.png"></P>
+							<p id="idcabeca" class="cabeca"><img src="img/erro5.png"></P>
+							<p id="idtronco" class="tronco"><img src="img/erro6.png"></P>
+							<p id="idpernaEsquerda" class="pernaEsquerda"><img src="img/erro7.png"></P>
+							<p id="idpernaDireita" class="pernaDireita"><img src="img/erro8.png"></P>
+							<p id="idbracoEsquerdo" class="bracoEsquerdo"><img src="img/erro9.png"></P>
+							<p id="idbracoDireito" class="bracoDireito"><img src="img/erro10.png"></P>
+							<p id="idmensagem" class="mensagem"></P>
+							
+						</div>
+						<div class="barraAcertos">
+							<!--&nbsp&nbsp&nbsp&nbsp&nbsp-->
+							<p class="letraAcertada"></p>
+							<p class="barra"><img src="img/Rectangle.png"> <img src="img/Rectangle.png"></P>
+								
+						</div>
+					</div>
+
+					<div class="botaoNovoJogoDesistir">
+
+						<button type="button" class="botaoNovoJogo">Novo Jogo</button>
+						<button type="button" class="botaoDesistir">Desistir</button>
+
+					</div>
+				</div>
+			</section>
+
+
+		</main>
+
+		<footer>
+			
+			<div class="divRodape">
+				<h1 class="rodape">© <strong>André Mansur Chalhub</strong> - Segundo Desafio Alura</h1>
+			</div>
+			
+		</footer>
+
+		<script src="js/principal.js"></script>
+
+	</body>
+</html>
